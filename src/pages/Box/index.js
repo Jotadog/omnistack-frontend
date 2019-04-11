@@ -26,7 +26,7 @@ export default class Box extends Component {
 
   subscribeToNewFiles = () => {
     const box = this.props.match.params.id;
-    const io = socket("http://localhost:3000");
+    const io = socket("https://api-omnistack-jotadog.herokuapp.com");
     io.emit("connectRoom", box);
 
     io.on("file", data => {
